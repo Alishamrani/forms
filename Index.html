@@ -47,10 +47,6 @@
       line-height: 1.4;
     }
 
-    .section {
-      margin-bottom: 40px;
-    }
-
     .product {
       display: flex;
       flex-direction: column;
@@ -97,6 +93,18 @@
       background-color: #555;
     }
 
+    .payment-methods {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .payment-methods img {
+      width: 50px;
+      height: 30px;
+      margin: 0 10px;
+    }
+
     footer {
       background-color: #333;
       color: #fff;
@@ -109,36 +117,28 @@
       color: #fff;
       text-decoration: none;
     }
-
-    .payment-methods {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .payment-methods img {
-      width: 50px;
-      height: 50px;
-      margin: 0 10px;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1><img src="honeycomb-logo.png" alt="Honeycomb Logo"> Honeycomb - The Art of Pure Honey</h1>
+    <h1><img src="honeycomb-logo.png" alt="Honeycomb Logo"> <br/> Honeycomb - The Art of Pure Honey</h1>
   </header>
 
   <main>
-    <section class="section">
-      <h2>Buy the Finest Honey</h2>
-      <div class="product">
-        <img src="honey3.JPG" alt="Honey Product 1">
-        <h4>Honey Product 1</h4>
-        <p>Sourced from the finest apiaries, this golden amber honey is perfect for drizzling over desserts or adding a touch of sweetness to your morning tea. Its distinct flavor profile and smooth texture make it a versatile and delightful addition to your pantry.</p>
-        <p>Price: 100 Riyal (Including shipping within KSA)</p>
-        <button>Add to Cart</button>
-      </div>
-    </section>
+    <h2>Buy the Finest Honey</h2>
+    <div class="product">
+      <img src="honey3.JPG" alt="Honey Product 1">
+      <h4>Honey Product 1</h4>
+      <p>Sourced from the finest apiaries, this golden amber honey is perfect for drizzling over desserts or adding a touch of sweetness to your morning tea. Its distinct flavor profile and smooth texture make it a versatile and delightful addition to your pantry.</p>
+      <p>Price: 100 Riyal (Including shipping within KSA)</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="payment-methods">
+      <img src="visa.png" alt="Visa">
+      <img src="mastercard.png" alt="Mastercard">
+      <img src="paypal.png" alt="PayPal">
+    </div>
   </main>
 
   <footer>
