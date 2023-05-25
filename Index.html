@@ -14,13 +14,13 @@
     }
 
     header {
-      background-color: #ffd700;
+      background-color: #fff;
       padding: 20px;
       text-align: center;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 24px;
       margin: 0;
       color: #fff;
     }
@@ -36,6 +36,7 @@
     h2 {
       font-size: 28px;
       color: #333;
+      text-align: center;
       margin-bottom: 20px;
     }
 
@@ -56,14 +57,13 @@
       margin-bottom: 40px;
       text-align: center;
       padding: 20px;
-      background-color: #f8f8f8;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
       border-radius: 8px;
     }
 
     .product img {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
       margin-bottom: 20px;
       border-radius: 8px;
@@ -71,7 +71,7 @@
     }
 
     .product h4 {
-      font-size: 24px;
+      font-size: 20px;
       margin: 0;
       color: #333;
     }
@@ -84,8 +84,8 @@
     }
 
     .product button {
-      background-color: #333;
-      color: #fff;
+      background-color: #f0c14b;
+      color: #111;
       border: none;
       padding: 10px 20px;
       cursor: pointer;
@@ -96,147 +96,11 @@
     }
 
     .product button:hover {
-      background-color: #555;
+      background-color: #daa520;
     }
 
     footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    footer p {
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .section ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .section ul li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      color: #555;
-    }
-
-    .section ul li img {
-      width: 30px;
-      height: 30Certainly! Here's an updated version of the HTML code with the changes you requested:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Honeycomb - The Art of Pure Honey</title>
-  <style>
-    /* Add your custom styles here */
-    body {
-      font-family: "Arial", sans-serif;
-      background-color: #f8f8f8;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #ffd700;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin: 0;
-      color: #fff;
-    }
-
-    main {
-      max-width: 960px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    h2 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.4;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .product {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 40px;
-      text-align: center;
-      padding: 20px;
-      background-color: #f8f8f8;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    .product img {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .product h4 {
-      font-size: 24px;
-      margin: 0;
-      color: #333;
-    }
-
-    .product p {
-      margin-top: 10px;
-      font-size: 16px;
-      line-height: 1.4;
-      color: #555;
-    }
-
-    .product button {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    .product button:hover {
-      background-color: #555;
-    }
-
-    footer {
-      background-color: #333;
+      background-color: #111;
       color: #fff;
       padding: 20px;
       text-align: center;
@@ -269,45 +133,38 @@
       height: 30px;
       margin-right: 10px;
     }
-
-    .payment-methods {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 40px;
-    }
-
-    .payment-methods img {
-      width: 50px;
-      height: 50px;
-      margin: 0 10px;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Honeycomb - The Art of Pure Honey</h1>
+    <h1><img src="honeycomb-logo.png" alt="Honeycomb Logo"> Honeycomb - The Art of Pure Honey</h1>
   </header>
 
   <main>
-    <h2 style="text-align: center;">Buy the Finest Honey</h2>
+    <section class="section">
+      <h2 style="text-align: center;">Buy the Finest Honey</h2>
+      <div class="product">
+        <img src="honey3.JPG" alt="Honey Product 1">
+        <h4>Honey Product 1</h4>
+        <p>Sourced from the finest apiaries, this golden amber honey is perfect for drizzling over desserts or adding a touch of sweetness to your morning tea. Its distinct flavor profile and smooth texture make it a versatile and delightful addition to your pantry.</p>
+        <p>Price: 100 Riyal (Including shipping within KSA)</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
 
-    <div class="product">
-      <img src="product3.JPG" alt="Product Image">
-      <h4>Product 1</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <button>Buy Now</button>
-    </div>
-
-    <div class="payment-methods">
-      <img src="<i class='bx bxl-visa'></i>" alt="Visa">
-      <img src="<i class='bx bxl-mastercard' ></i>" alt="Mastercard">
-      <img src="<i class='bx bxl-paypal' ></i>" alt="PayPal">
-    </div>
+    <section class="section">
+      <h2 style="text-align: center;">Payment Methods</h2>
+      <p style="text-align: center;">We accept the following payment methods:</p>
+      <ul style="display: flex; justify-content: center;">
+        <li><img src="visa.png" alt="Visa"></li>
+        <li><img src="mastercard.png" alt="Mastercard"></li>
+        <li><img src="paypal.png" alt="PayPal"></li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2023 Honeycomb. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    <p>&copy; 2023 Honeycomb. All rights reserved. | Contact us at <a href="mailto:info@honeycomb.com">info@honeycomb.com</a></p>
   </footer>
 </body>
 </html>
