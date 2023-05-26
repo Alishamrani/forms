@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Page</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Reset styles */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Education Section */
+        .education {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .heading {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .education-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .education-box {
+            width: calc(33.33% - 20px);
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .education-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-box img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .education-box h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .education-box p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .footer-text p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-iconTop a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Work</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- education section design -->
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+
+        <div class="education-container">
+            <div class="education-box">
+                <img src="images/education1.jpg" alt="">
+                <h3>Bachelor's Degree</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus arcu nec est interdum, id feugiat sapien hendrerit.</p>
+            </div>
+
+            <div class="education-box">
+                <img src="images/education2.jpg" alt="">
+                <h3>Master's Degree</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus arcu nec est interdum, id feugiat sapien hendrerit.</p>
+            </div>
+
+            <div class="education-box">
+                <img src="images/education3.jpg" alt="">
+                <h3>PhD Degree</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dapibus arcu nec est interdum, id feugiat sapien hendrerit.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Ali Alshamrani | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
