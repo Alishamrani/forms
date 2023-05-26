@@ -1,225 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Education Page</title>
-  <style>
-    /* Your CSS code goes here */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    <title>My Website</title>
+    <style>
+        /* Paste your CSS code here */
+        /* ... (previous CSS code) ... */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
-      border: none;
-      outline: none;
-      scroll-behavior: smooth;
-      font-family: 'Poppins', sans-serif;
-    }
+        /* Add the rest of your CSS code here */
+        .about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
 
-    :root {
-      --bg-color: #1f242d;
-      --second-bg-color: #323946;
-      --text-color: #fff;
-      --main-color: #0ef;
-    }
+        .about-img {
+            flex: 1 1 40rem;
+        }
 
-    html {
-      font-size: 62.5%;
-      overflow-y: scroll;
-      overflow-x: hidden;
-    }
+        .about-img img {
+            width: 100%;
+            border-radius: 2rem;
+            box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+        }
 
-    body {
-      background: var(--bg-color);
-      color: var(--text-color);
-      position: absolute;
-    }
+        .about-content {
+            flex: 1 1 40rem;
+            margin-left: 4rem;
+        }
 
-    .section {
-      min-height: 100vh;
-      padding: 10rem 9% 2rem;
-    }
+        .about-content h2 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 2rem 9%;
-      background: var(--bg-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-    }
+        .about-content p {
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+        }
 
-    .header.sticky {
-      border-bottom: .1rem solid rgba(0, 0, 0, .2);
-    }
+        .about-content .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    .logo {
-      font-size: 2.5rem;
-      color: var(--text-color);
-      font-weight: 600;
-      cursor: default;
-    }
-
-    .navbar a {
-      font-size: 1.7rem;
-      color: var(--text-color);
-      margin-left: 4rem;
-      transition: .3s;
-    }
-
-    .navbar a:hover,
-    .navbar a.active {
-      color: var(--main-color);
-    }
-
-    #menu-icon {
-      font-size: 3.6rem;
-      color: var(--text-color);
-      display: none;
-    }
-
-    .home {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .home-img img {
-      width: 35vw;
-      animation: floatImage 4s ease-in-out infinite;
-      border-radius: 50%;
-      border: .2rem solid var(--bg-color);
-      border-color: var(--main-color);
-    }
-
-    @keyframes floatImage {
-      0% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-2.4rem);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .home-content h3 {
-      font-size: 3.2rem;
-      font-weight: 700;
-    }
-
-    .home-content h3:nth-of-type(2) {
-      margin-bottom: 2rem;
-    }
-
-    span {
-      color: var(--main-color);
-    }
-
-    .home-content h1 {
-      font-size: 5.6rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-
-    .home-content p {
-      font-size: 1.6rem;
-    }
-
-    .social-media a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 4rem;
-      height: 4rem;
-      background: transparent;
-      border: .2rem solid var(--main-color);
-      border-radius: 50%;
-      font-size: 2rem;
-      color: var(--main-color);
-      margin: 3rem 1.5rem 3rem 0;
-      transition: .3s;
-    }
-
-    /* Your remaining HTML code goes here */
-    /* ... */
-
-  </style>
+        .about-content .skills li {
+            flex: 1 1 20rem;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="#" class="active">Home</a>
-      <a href="#">Courses</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div class="header">
-      <h1 class="logo">Education</h1>
-      <div id="menu-icon" class="bx bx-menu"></div>
+    <!-- Your HTML content goes here -->
+    <div class="about">
+        <div class="about-img">
+            <img src="about-image.jpg" alt="About Image">
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod dapibus ex, ac sodales purus sagittis at. Proin commodo felis nec pharetra euismod. Nulla vel tortor eget sem commodo pulvinar. Vestibulum sodales eros vitae eros tincidunt, id pulvinar nisi consequat. Nullam eu arcu vel mauris suscipit consectetur. Pellentesque ultrices purus in est lacinia mollis. Morbi ut nibh quis ex fermentum pulvinar eu eu ipsum. Fusce malesuada, felis eget malesuada faucibus, ex odio congue nisl, at lacinia mi ipsum in mi.</p>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </div>
     </div>
-  </header>
-
-  <section id="home" class="home">
-    <div class="home-img">
-      <img src="image1.jpg" alt="Image 1">
-    </div>
-    <div class="home-content">
-      <h3>Welcome to Education</h3>
-      <h1>Unlock Your Potential</h1>
-      <p>Join our diverse community of learners and expand your knowledge in various subjects.</p>
-      <a href="#" class="btn">Get Started</a>
-    </div>
-  </section>
-
-  <section id="courses" class="courses">
-    <div class="courses-container">
-      <div class="course-box">
-        <img src="image2.jpg" alt="Course 1">
-        <h3>Course 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="course-box">
-        <img src="image3.jpg" alt="Course 2">
-        <h3>Course 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="course-box">
-        <img src="image4.jpg" alt="Course 3">
-        <h3>Course 3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="about-img">
-      <img src="image5.jpg" alt="About Image">
-    </div>
-    <div class="about-content">
-      <h2>About Us</h2>
-      <h3>Our Mission</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate id nibh id feugiat.</p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-text">
-      <p>&copy; 2023 Education. All rights reserved.</p>
-    </div>
-    <div class="footer-iconTop">
-      <a href="#"><i class="bx bxl-facebook"></i></a>
-      <a href="#"><i class="bx bxl-twitter"></i></a>
-      <a href="#"><i class="bx bxl-instagram"></i></a>
-    </div>
-  </footer>
 </body>
 </html>
