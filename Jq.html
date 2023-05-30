@@ -1,0 +1,211 @@
+Certainly! Here's an updated version of the code that includes the requested features:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questions and Answers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .home-page {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .home-page h2 {
+            margin-bottom: 1rem;
+        }
+
+        .home-page a {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .home-page a.visited {
+            color: #999;
+        }
+
+        .question-page {
+            display: none;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .question-page.active {
+            display: block;
+        }
+
+        .question-image {
+            max-width: 400px;
+            margin-bottom: 1rem;
+        }
+
+        .question-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .question-description {
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+
+        .navigation-buttons {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .navigation-buttons button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .navigation-buttons button:last-child {
+            margin-right: 0;
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        .answer-page {
+            display: none;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .answer-page.active {
+            display: block;
+        }
+
+        .answer-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .answer-description {
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-question-button,
+        .back-to-home-button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .back-to-question-button:hover,
+        .back-to-home-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-page">
+        <h2>Welcome to Questions and Answers!</h2>
+        <p>Choose a question:</p>
+        <a href="#" onclick="showQuestionPage(0)">Question 1</a>
+        <a href="#" onclick="showQuestionPage(1)">Question 2</a>
+        <a href="#" onclick="showQuestionPage(2)">Question 3</a>
+        <!-- Add more question links as needed -->
+        <button class="back-to-home-button" onclick="showHomePage()">Home</button>
+    </div>
+
+    <div class="question-page">
+        <h2 class="question-title"></h2>
+        <img src="" class="question-image" alt="Question Image">
+        <p class="question-description"></p>
+        <div class="navigation-buttons">
+            <button onclick="showAnswerPage(currentQuestionIndex)">Show Answer</button>
+           
+
+ <button class="back-to-home-button" onclick="showHomePage()">Home</button>
+        </div>
+    </div>
+
+    <div class="answer-page">
+        <h2 class="answer-title"></h2>
+        <img src="" class="question-image" alt="Answer Image">
+        <p class="answer-description"></p>
+        <div class="navigation-buttons">
+            <button class="back-to-question-button" onclick="showQuestionPage(currentQuestionIndex)">Back to Question</button>
+            <button class="back-to-home-button" onclick="showHomePage()">Home</button>
+        </div>
+    </div>
+
+    <script>
+        var currentQuestionIndex;
+
+        function showHomePage() {
+            document.querySelector('.home-page').style.display = 'block';
+            document.querySelector('.question-page').style.display = 'none';
+            document.querySelector('.answer-page').style.display = 'none';
+        }
+
+        function showQuestionPage(questionIndex) {
+            currentQuestionIndex = questionIndex;
+            var questionPage = document.querySelector('.question-page');
+            var questionTitle = questionPage.querySelector('.question-title');
+            var questionImage = questionPage.querySelector('.question-image');
+            var questionDescription = questionPage.querySelector('.question-description');
+
+            questionTitle.textContent = 'Question ' + (questionIndex + 1);
+            // Replace the image source with the actual path to your question images
+            questionImage.src = 'path_to_question_image_' + questionIndex + '.jpg';
+            questionDescription.textContent = 'Question ' + (questionIndex + 1) + ' description';
+
+            document.querySelector('.home-page').style.display = 'none';
+            questionPage.style.display = 'block';
+            document.querySelector('.answer-page').style.display = 'none';
+
+            // Reset the visited state of question links
+            var questionLinks = document.querySelectorAll('.home-page a');
+            for (var i = 0; i < questionLinks.length; i++) {
+                questionLinks[i].classList.remove('visited');
+            }
+            // Add visited class to the clicked question link
+            questionLinks[questionIndex].classList.add('visited');
+        }
+
+        function showAnswerPage(questionIndex) {
+            var answerPage = document.querySelector('.answer-page');
+            var answerTitle = answerPage.querySelector('.answer-title');
+            var answerImage = answerPage.querySelector('.question-image');
+            var answerDescription = answerPage.querySelector('.answer-description');
+
+            answerTitle.textContent = 'Answer for Question ' + (questionIndex + 1);
+            // Replace the image source with the actual path to your answer images
+            answerImage.src = 'path_to_answer_image_' + questionIndex + '.jpg';
+            answerDescription.textContent = 'Answer for Question ' + (questionIndex + 1) + ' description';
+
+            document.querySelector('.home-page').style.display = 'none';
+            document.querySelector('.question-page').style.display = 'none';
+            answerPage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+```
+
+Please make sure to replace `'path_to_question_image_' + questionIndex + '.jpg'` with the actual path to your question images and `'path_to_answer_image_' + questionIndex + '.jpg'` with the actual path to your answer images.
+
+Now, when you click on a question link, it will change color after visiting, and each question page will have a button to show the corresponding answer page. The home button is available on all pages for easy navigation.
