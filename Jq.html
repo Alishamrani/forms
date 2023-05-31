@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial- scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questions and Answers</title>
     <style>
         body {
@@ -57,6 +57,7 @@
         .question-description {
             font-size: 18px;
             margin-bottom: 1rem;
+            white-space: pre-wrap;
         }
 
         .navigation-buttons {
@@ -67,7 +68,7 @@
         .navigation-buttons button {
             font-size: 20px;
             padding: 10px 20px;
-            background-color: #222222;
+            background-color: #444444;
             color: #ffffff;
             border: none;
             cursor: pointer;
@@ -101,6 +102,7 @@
         .answer-description {
             font-size: 18px;
             margin-bottom: 1rem;
+            white-space: pre-wrap;
         }
 
         .reset-button {
@@ -114,7 +116,7 @@
         }
 
         .reset-button:hover {
-            background-color: #333333;
+            background-color: #111111;
         }
     </style>
 </head>
@@ -127,12 +129,12 @@
         <a href="#" onclick="showQuestionPage(2)" id="question-link-2">Question 3</a>
         <a href="#" onclick="showQuestionPage(3)" id="question-link-3">Question 4</a>
         <!-- Add more question links as needed -->
-        <button class="reset-button" onclick="resetQuestionLinksColor()">Reset Color</button>
+        <button class="reset-button" onclick="resetQuestionLinksColor()">Reset</button>
     </div>
 
     <div class="question-page">
         <h2 class="question-title"></h2>
-        <div class="question-images"></div>
+        <img src="" class="question-image" alt="Question Image">
         <p class="question-description"></p>
         <div class="navigation-buttons">
             <button onclick="showAnswerPage(currentQuestionIndex)">Show Answer</button>
@@ -142,7 +144,7 @@
 
     <div class="answer-page">
         <h2 class="answer-title"></h2>
-        <div class="answer-images"></div>
+        <img src="" class="question-image" alt="Answer Image">
         <p class="answer-description"></p>
         <div class="navigation-buttons">
             <button class="back-to-question-button" onclick="showQuestionPage(currentQuestionIndex)">Back to Question</button>
@@ -154,36 +156,33 @@
         var questions = [
             {
                 questionTitle: 'Question 1',
-                questionImages: ['Q1.1.jpg', 'Q1.jpg'],
-                questionDescription: 'Question 1A description',
-                answerTitle: 'Answer for Question 1',
-                answerImages: ['path_to_answer_image_1_1.jpg', 'path_to_answer_image_1_2.jpg'],
-                answerDescription: 'Answer for Question 1 description'
+                questionImages: ['path_to_question_image_1.jpg'],
+                questionDescription: 'Question 1 description\nThis is a multi-line description for Question 1.',
+                answerImages: ['path_to_answer_image_1.jpg'],
+                answerDescription: 'Answer for Question 1\nThis is a multi-line answer for Question 1.'
             },
             {
                 questionTitle: 'Question 2',
-                questionImages: ['path_to_question_image_2_1.jpg'],
-                questionDescription: 'Question 2 description',
-                answerTitle: 'Answer for Question 2',
-                answerImages: ['path_to_answer_image_2_1.jpg'],
-                answerDescription: 'Answer for Question 2 description'
+                questionImages: ['path_to_question_image_2.jpg'],
+                questionDescription: 'Question 2 description\nThis is a multi-line description for Question 2.',
+                answerImages: ['path_to_answer_image_2.jpg'],
+                answerDescription: 'Answer for Question 2\nThis is a multi-line answer for Question 2.'
             },
-				{
-                questionTitle: 'Question 3',
-                questionImages: ['path_to_question_image_2_1.jpg'],
-                questionDescription: 'Question 3 description',
-                answerTitle: 'Answer for Question 3',
-                answerImages: ['path_to_answer_image_2_1.jpg'],
-                answerDescription: 'Answer for Question 3 description'
+            {
+            questionTitle: 'Question 3',
+            questionImages: ['path_to_question_image_2.jpg'],
+            questionDescription: 'Question 3 description\nThis is a multi-line description for Question 2.',
+            answerImages: ['path_to_answer_image_2.jpg'],
+            answerDescription: 'Answer for Question 3\nThis is a multi-line answer for Question 2.'
             },
-				{
-                questionTitle: 'Question 4',
-                questionImages: ['path_to_question_image_2_1.jpg'],
-                questionDescription: 'Question 4 description',
-                answerTitle: 'Answer for Question 4',
-                answerImages: ['path_to_answer_image_2_1.jpg'],
-                answerDescription: 'Answer for Question 4 description'
+            {
+            questionTitle: 'Question 4',
+            questionImages: ['path_to_question_image_2.jpg'],
+            questionDescription: 'Question 4 description\nThis is a multi-line description for Question 2.',
+            answerImages: ['path_to_answer_image_2.jpg'],
+            answerDescription: 'Answer for Question 4\nThis is a multi-line answer for Question 2.'
             },
+            
             // Add more questions as needed
         ];
 
@@ -199,17 +198,11 @@
             currentQuestionIndex = questionIndex;
             var questionPage = document.querySelector('.question-page');
             var questionTitle = questionPage.querySelector('.question-title');
-            var questionImagesContainer = questionPage.querySelector('.question-images');
+            var questionImage = questionPage.querySelector('.question-image');
             var questionDescription = questionPage.querySelector('.question-description');
 
             questionTitle.textContent = questions[questionIndex].questionTitle;
-            questionImagesContainer.innerHTML = ''; // Clear previous images
-            questions[questionIndex].questionImages.forEach(function(imagePath) {
-                var imageElement = document.createElement('img');
-                imageElement.src = imagePath;
-                imageElement.classList.add('question-image');
-                questionImagesContainer.appendChild(imageElement);
-            });
+            questionImage.src = questions[questionIndex].questionImages[0];
             questionDescription.textContent = questions[questionIndex].questionDescription;
 
             document.querySelector('.home-page').style.display = 'none';
@@ -224,17 +217,11 @@
         function showAnswerPage(questionIndex) {
             var answerPage = document.querySelector('.answer-page');
             var answerTitle = answerPage.querySelector('.answer-title');
-            var answerImagesContainer = answerPage.querySelector('.answer-images');
+            var answerImage = answerPage.querySelector('.question-image');
             var answerDescription = answerPage.querySelector('.answer-description');
 
-            answerTitle.textContent = questions[questionIndex].answerTitle;
-            answerImagesContainer.innerHTML = ''; // Clear previous images
-            questions[questionIndex].answerImages.forEach(function(imagePath) {
-                var imageElement = document.createElement('img');
-                imageElement.src = imagePath;
-                imageElement.classList.add('question-image');
-                answerImagesContainer.appendChild(imageElement);
-            });
+            answerTitle.textContent = 'Answer for ' + questions[questionIndex].questionTitle;
+            answerImage.src = questions[questionIndex].answerImages[0];
             answerDescription.textContent = questions[questionIndex].answerDescription;
 
             document.querySelector('.home-page').style.display = 'none';
